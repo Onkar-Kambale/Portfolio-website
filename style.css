@@ -1,0 +1,350 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #5D3FD3, #8E44AD, #C77DFF);
+  color: #f5e8ff;
+}
+
+
+
+/* Navbar */
+header {
+  background: transparent;
+  padding: 20px 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f5e8ff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #C77DFF;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* Section */
+.section {
+  padding: 100px 50px;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #C77DFF;
+}
+
+/* Home */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 6px solid #C77DFF;
+  margin-bottom: 20px;
+}
+
+.intro h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.intro span {
+  color: #C77DFF;
+}
+
+.intro p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #C77DFF;
+  color: #4b006e;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #f5e8ff;
+  color: #4b006e;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Individual card */
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px 20px;
+  width: 300px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: rgba(199, 125, 255, 0.2);
+  box-shadow: 0 0 20px #C77DFF, 0 0 40px #C77DFF, 0 0 60px #C77DFF;
+}
+
+/* GitHub Link */
+.github-link {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.github-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.github-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2) saturate(2);
+}
+
+.card-buttons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.demo-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #C77DFF;
+  color: #4b006e;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.demo-button:hover {
+  background-color: #f5e8ff;
+  color: #4b006e;
+  transform: scale(1.05);
+}
+
+/* Social Links */
+#socials {
+  margin-top: 15px;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 120px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #e0c8ff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-item:hover {
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+}
+
+
+/* Contact Form */
+#contact-form {
+  max-width: 500px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  color: #ddd;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#contact-form button {
+  background: linear-gradient(135deg, #6e45e2, #88d3ce);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.4s, transform 0.3s;
+}
+
+#contact-form button:hover {
+  background: linear-gradient(135deg, #88d3ce, #6e45e2);
+  transform: translateY(-3px);
+}
+
+/* Heading Animation */
+.section h2 {
+  animation: slideUp 1s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Footer */
+footer {
+  background: #2e0854;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+  .menu-icon {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .nav-links.active {
+    display: flex;
+    position: absolute;
+    background: #3a0077;
+    top: 70px;
+    right: 30px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .download-button {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #C77DFF, #8E44AD);
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(199, 125, 255, 0.4);
+    transition: all 0.3s ease;
+  }
+  
+  .download-button:hover {
+    background: linear-gradient(135deg, #f5e8ff, #C77DFF);
+    color: #4b006e;
+    transform: translateY(-3px);
+  }  
+}
